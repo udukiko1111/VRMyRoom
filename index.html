@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>自分の部屋ミニチュア</title>
+  <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+</head>
+<body>
+  <a-scene>
+
+    
+
+    <!-- 床 -->
+    <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="4" color="#c8a27a"></a-plane>
+
+    <!-- 壁（奥・左・右） -->
+    <a-plane position="0 1.25 -2" width="4" height="2.5" color="#f4efe6"></a-plane>
+    <a-plane position="-2 1.25 0" rotation="0 90 0" width="4" height="2.5" color="#ebe4d6"></a-plane>
+    <a-plane position="2 1.25 0" rotation="0 -90 0" width="4" height="2.5" color="#ebe4d6"></a-plane>
+
+    <!-- ベッド（左奥） -->
+    <a-box position="-1.2 0.25 -1.1" width="1" height="0.5" depth="2" color="#6b8fd6"></a-box>
+    <a-box position="-1.2 0.55 -1.8" width="0.7" height="0.12" depth="0.35" color="#ffffff"></a-box>
+
+    <!-- 机（右奥）：天板 + 脚4本 -->
+    <a-box position="1.2 0.75 -1.5" width="1.2" height="0.06" depth="0.6" color="#8b5a2b"></a-box>
+    <a-box position="0.65 0.36 -1.75" width="0.06" height="0.72" depth="0.06" color="#8b5a2b"></a-box>
+    <a-box position="1.75 0.36 -1.75" width="0.06" height="0.72" depth="0.06" color="#8b5a2b"></a-box>
+    <a-box position="0.65 0.36 -1.25" width="0.06" height="0.72" depth="0.06" color="#8b5a2b"></a-box>
+    <a-box position="1.75 0.36 -1.25" width="0.06" height="0.72" depth="0.06" color="#8b5a2b"></a-box>
+
+    <!-- モニター（机の上） -->
+    <a-box position="1.2 1.1 -1.7" width="0.6" height="0.35" depth="0.04" color="#222222"></a-box>
+    <a-box position="1.2 0.85 -1.7" width="0.1" height="0.15" depth="0.1" color="#444444"></a-box>
+
+    <!-- 椅子 -->
+    <a-box position="1.2 0.45 -0.9" width="0.45" height="0.06" depth="0.45" color="#d9534f"></a-box>
+    <a-box position="1.2 0.75 -0.67" width="0.45" height="0.55" depth="0.06" color="#d9534f"></a-box>
+    <a-cylinder position="1.2 0.22 -0.9" radius="0.04" height="0.44" color="#333333"></a-cylinder>
+
+    <!-- 本棚 -->
+    <a-box position="1.8 0.9 0.4" width="0.3" height="1.8" depth="1" color="#a9744f"></a-box>
+    <a-box position="1.62 1.4 0.4" width="0.02" height="0.25" depth="0.8" color="#4caf50"></a-box>
+    <a-box position="1.62 0.9 0.4" width="0.02" height="0.25" depth="0.8" color="#ffc107"></a-box>
+
+    <!-- ゴミ箱　-->
+    <a-cylinder position="-1.7 0.2 0.8" radius="0.2" height="0.4" color="#b5651d"></a-cylinder>
+    
+
+    <!-- ラグ -->
+    <a-circle position="-0.2 0.01 0.2" rotation="-90 0 0" radius="0.8" color="#e8a0bf"></a-circle>
+
+    <!-- 照明 -->
+    <a-entity light="type: ambient; intensity: 0.8"></a-entity>
+    <a-entity light="type: point; intensity: 0.9; distance: 8" position="0 2.4 0"></a-entity>
+
+    <!-- 外の空 -->
+    <a-sky color="#bfe3ff"></a-sky>
+
+    <!-- 見る人 -->
+    <a-entity position="0 0 1.6">
+      <a-camera></a-camera>
+    </a-entity>
+
+  </a-scene>
+</body>
+</html>
